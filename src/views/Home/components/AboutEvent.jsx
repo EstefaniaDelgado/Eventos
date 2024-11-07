@@ -1,0 +1,28 @@
+const AboutEvent = () => {
+  return (
+    <section className="relative z-10 my-16 mx-5 max-w-[1200px] md:flex md:items-center md:gap-5 xl:mx-auto">
+      <div className="pt-6 flex flex-col justify-end items-start gap-5 md:flex-1 md:order-1 md:pl-5 xl:p-5 ">
+        {' '}
+        <h2 className="absolute top-0 text-5xl font-extrabold text-gray-900 md:text-6xl lg:text-8xl">ABOUT</h2>
+       <div className="z-50">
+       <h3 className="font-light z-50 text-xl font-title text-purple-600">
+          [ Sobre el <strong>Evento ]</strong>
+        </h3>
+        <h2 className="z-50 font-semibold text-2xl ">Bienvenido a los mejores eventos para terminar muy bien el 2024</h2>
+       </div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, magni commodi voluptate, eveniet exercitationem obcaecati quod ipsam doloribus vero non inventore debitis, quisquam ullam. </p>
+        <button className="border-white border-2 px-8 py-2 rounded-3xl font-semibold tracking-widest">VER MÁS!</button>
+      </div>
+
+      <div className=" flex flex-col gap-2 mt-5 md:w-full md:mt-0 md:flex-1 md:pl-5">
+       <div className=" h-20 md:h-24 w-4/5 bg-artist bg-top bg-cover rounded-lg "></div>
+       <div className=" h-20 md:h-24  w-3/4 rounded-lg self-end  bg-artist bg-center bg-cover"></div>
+       <div className=" h-20 md:h-24 rounded-lg w-4/5 bg-artist bg-bottom bg-cover"></div>
+      </div>
+  
+     
+    </section>
+  );
+};
+
+export default AboutEvent;

@@ -1,0 +1,18 @@
+.custom-pagination .swiper-pagination-bullet {
+    background-color: white; /* Color blanco para todos los puntos */
+    opacity: 1; /* Asegúrate de que todos los puntos sean visibles */
+  }
+  
+  .custom-pagination .swiper-pagination-bullet-active {
+    background-color: green; /* Color verde solo para el punto activo */
+  }
+
+  .truncate-text {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 90%; 
+    display: block;
+  }
+  
+  

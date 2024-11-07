@@ -1,0 +1,21 @@
+.container{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.active{
+    border-bottom: 1px solid #333;
+}
+
+.tab{
+    font-size: 20px;
+    font-weight: 600;
+    padding-bottom: 4px;
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+}
+
+.tab:hover{
+    opacity: 0.8;
+}
