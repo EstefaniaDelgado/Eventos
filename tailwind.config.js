@@ -9,10 +9,12 @@ export default {
     extend: {
       colors:{
        greenJungle:'#1c5d54',
+       purple:'#9333ea'
       },
       backgroundImage: {
         'hero-image': "linear-gradient(to bottom, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.9) 100%),url('../src/assets/hero.jpg')",
-        'artist':"url('../src/assets/artist.jpg')"
+        'artist':"url('../src/assets/artist.jpg')",
+        'counter':"url('../src/assets/background-counter-date.webp')",
       },
       fontFamily: {
         'header': ["Rock Salt", "cursive"], 
