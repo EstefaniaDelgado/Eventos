@@ -5,7 +5,7 @@ const AboutEvent = () => {
         {' '}
         <h2 className="absolute top-0 text-5xl font-extrabold text-gray-900 md:text-6xl lg:text-8xl xl:text-9xl">ABOUT</h2>
        <div className="z-50">
-       <h3 className="font-light z-50 text-xl font-title text-purple-600">
+       <h3 className="font-light z-50 text-xl font-title text-purple">
           [ Sobre el <strong>Evento ]</strong>
         </h3>
         <h2 className="z-50 font-semibold text-2xl ">Bienvenido a los mejores eventos para terminar muy bien el 2024</h2>
