@@ -7,6 +7,7 @@ import Hero from "./components/Hero";
 import AboutEvent from "./components/AboutEvent";
 import Slider from "../Home/components/Slider"
 import Counter from "../Home/components/Schedule/components/Counter"
+import TicketEvent from "./components/TicketEvent/TicketEvent";
 
 const Home = () => {
 
@@ -93,6 +94,7 @@ const Home = () => {
     <Slider />
     <AboutEvent/>
     <Counter/>
+    <TicketEvent />
 
     {/* 2. FORMA DE RENDERIZAR EL ERROR Y LA CARGA */}
      {/* {isLoading ? <div>Cargando resultados..</div>: <Events searchTerm={searchTerm} events={events}/>}
