@@ -1,41 +1,41 @@
 const Counter = () => {
   return (
-    <div className="h-[520px]  md:h-[647px] relative flex flex-col">
-      <section className="bg-counter pt-10 pb-10 md:pt-14 md:pb-24">
+    <div className="h-[535px]  md:h-[800px] relative flex flex-col">
+      <section className="bg-counter pt-10 pb-16 md:pt-14 md:pb-40">
         <div
-          className="mx-auto w-5/6 max-w-[1200px] flex flex-col md:flex-row md:justify-evenly lg:justify-evenly justify-center items-center"
+          className=" mx-auto w-11/12 max-w-[1200px] flex flex-col md:flex-row md:justify-around items-center"
         >
-          <h2 className=" text-2xl text-center lg:text-start font-semibold p-5 md:p-0 md:flex-[0.5] xl:text-3xl ">
+          <h2 className="text-2xl text-center md:text-start lg:text-start font-semibold p-5 md:p-0 md:flex-[0.5] xl:text-3xl ">
             Conteo de cada <strong className="text-purple">segundo</strong>{' '}
             antes del <strong className="text-purple">Evento</strong>
           </h2>
-          <article className="mb-8 max-w-[446px] text-center grid grid-cols-3 auto-cols-auto md:grid-cols-7 place-items-center items-center md:gap-3 md:mb-0 md:mt-0">
+          <article className=" mb-8 w-8/12 max-w-[750px] text-center grid grid-cols-3 auto-cols-auto md:grid-cols-7 place-items-center items-center md:gap-0 lg:gap-6 md:mb-0 md:mt-0">
             {' '}
-            <div>
-              <p className="text-4xl font-semibold md:text-5xl">340</p>
-              <p className="text-pink md:text-xl self-end md:mt-5">[Días]</p>
+            <div className="lg:mr-8">
+              <p className="text-4xl font-semibold md:text-5xl lg:text-7xl ">340</p>
+              <p className="text-pink md:text-xl lg:text-2xl self-end md:mt-5">[Días]</p>
             </div>
-            <strong className="text-4xl md:self-start ">:</strong>
+            <strong className="text-4xl lg:text-6xl  md:self-start ">:</strong>
             <div>
-              <p className="text-4xl font-semibold md:text-5xl">18</p>
-              <p className="text-pink  md:text-xl md:mt-5">[Horas]</p>
+              <p className="text-4xl lg:text-7xl font-semibold md:text-5xl">18</p>
+              <p className="text-pink  md:text-xl lg:text-2xl md:mt-5">[Horas]</p>
             </div>
-            <strong className="text-4xl hidden md:block md:self-start">
+            <strong className="text-4xl lg:text-6xl hidden md:block md:self-start">
               :
             </strong>
             <div>
-              <p className="text-4xl font-semibold md:text-5xl">13</p>
-              <p className="text-pink  md:text-xl md:mt-5">[Minutos]</p>
+              <p className="text-4xl lg:text-7xl font-semibold md:text-5xl">13</p>
+              <p className="text-pink  md:text-xl lg:text-2xl md:mt-5">[Minutos]</p>
             </div>
-            <strong className="text-4xl md:self-start">:</strong>
+            <strong className="text-4xl lg:text-6xl md:self-start">:</strong>
             <div>
-              <p className="text-4xl font-semibold md:text-5xl">13</p>
-              <p className="text-pink  md:text-xl md:mt-5">[Segundos]</p>
+              <p className="text-4xl lg:text-7xl font-semibold md:text-5xl">13</p>
+              <p className="text-pink  md:text-xl lg:text-2xl md:mt-5">[Segundos]</p>
             </div>
           </article>
         </div>
       </section>
-      <div className="absolute w-5/6  max-w-[1015px] h-52 md:h-[400px] bottom-0 md:bottom-3  lg:bottom-14 right-1/2 transform translate-x-1/2 bg-theater bg-no-repeat bg-center bg-cover rounded"></div>
+      <div className="absolute w-5/6  max-w-[1200px] h-52 md:h-[550px] bottom-0 md:bottom-3  lg:bottom-0 right-1/2 transform translate-x-1/2 bg-theater bg-no-repeat bg-center bg-cover rounded"></div>
     </div>
   );
 };
