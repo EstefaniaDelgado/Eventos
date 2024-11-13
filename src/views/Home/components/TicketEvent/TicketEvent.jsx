@@ -70,8 +70,8 @@ const TicketEvent = () => {
           TICKETS
         </h2>
         <div className="z-50">
-          {/* <h3 className="font-light z-50 text-xl font-title text-pink-600"> */}
-          <h3 className="font-light z-50 text-lg md:text-xl font-title text-pink-600">
+          {/* <h3 className="font-light z-50 text-xl font-title text-subtitlePrimary-600"> */}
+          <h3 className="font-light z-50 text-lg md:text-xl font-title text-subtitlePrimary">
             [ Elige un Ticket ]
           </h3>
           {/* <h2 className="z-50 font-semibold text-3xl ">¿Cuál es el precio?</h2> */}
