@@ -73,7 +73,7 @@ const Detail = () => {
           {format(
             new Date(detailEvent.dates?.start?.localDate),
             'd LLLL yyyy',
-            { locate: es }
+            { locale: es }
           )}
         </p>
       ) : null}
