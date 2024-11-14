@@ -224,11 +224,11 @@ const Calendar = () => {
         />
       </section>
       {/* Images Section */}
-      <section className="mt-10 grid grid-cols-3 md:grid-cols-4 lg:grid-cols-5 place-items-center">
+      <section className="mt-10 h-[300px] grid grid-cols-3 md:grid-cols-4 lg:grid-cols-5 place-items-center">
         <img
           src={Singer}
           alt="entretenimiento"
-          className="h-full w-full col-span-2 md:col-auto md:row-auto"
+          className="h-full w-full object-cover col-span-2 md:col-auto md:row-auto"
         />
 
         <img
