@@ -31,7 +31,9 @@ const MembershipCard = ({ data }) => {
         <h2 className="text-5xl font-bold text-fuchsia-400 opacity-80">
           {data.price}
         </h2>
-        <p className="text-pink-600 font-medium">[ {data.membershipLevel} ]</p>
+        <p className="text-subtitlePrimary font-medium">
+          [ {data.membershipLevel} ]
+        </p>
         <div className="cursor-default flex items-center justify-center gap-2 font-medium absolute z-50 bottom-0 translate-y-1/2 bg-blue-950 text-white px-4 py-2 rounded-2xl mt-4">
           <svg
             xmlns="XXXXXXXXXXXXXXXXXXXXXXXXXX"
@@ -52,7 +54,7 @@ const MembershipCard = ({ data }) => {
       </div>
       <div className="relative rounded-b-xl py-12 px-5 flex flex-col gap-8 items-center bg-gray-950">
         {benefitsList}
-        <button className="flex items-center justify-center gap-2 font-medium border border-pink-600 absolute z-50 bottom-0 translate-y-1/2 bg-blue-950 text-white px-4 py-2 rounded-2xl mt-4">
+        <button className="flex items-center justify-center gap-2 font-medium border border-subtitlePrimary absolute z-50 bottom-0 translate-y-1/2 bg-blue-950 text-white px-4 py-2 rounded-2xl mt-4">
           OBTENER TICKET
         </button>
       </div>
