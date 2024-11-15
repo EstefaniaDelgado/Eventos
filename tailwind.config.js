@@ -22,5 +22,20 @@ export default {
       },
     },
   },
-  plugins: [],
+  plugins: [function ({ addBase }) {
+    addBase({
+      ".no-spin::-webkit-outer-spin-button": {
+        "-webkit-appearance": "none",
+        margin: "0",
+      },
+      ".no-spin::-webkit-inner-spin-button": {
+        "-webkit-appearance": "none",
+        margin: "0",
+      },
+      ".no-spin": {
+        "-moz-appearance": "textfield",
+      },
+    });
+  },
+  require("tailwind-scrollbar"),],
 };

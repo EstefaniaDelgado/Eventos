@@ -7,8 +7,10 @@ import Hero from "./components/Hero";
 import AboutEvent from "./components/AboutEvent";
 import Slider from "../Home/components/Slider"
 import Counter from "../Home/components/Schedule/components/Counter"
+import Calendar from "../Home/components/Schedule/components/Calendar/Calendar"
 import TicketEvent from "./components/TicketEvent/TicketEvent";
 import Guest from "./components/Guest/Guest";
+
 
 const Home = () => {
 
@@ -95,7 +97,9 @@ const Home = () => {
     <Slider />
     <AboutEvent/>
     <Counter/>
+    <Calendar/>
     <TicketEvent />
+   
     <Guest />
 
     {/* 2. FORMA DE RENDERIZAR EL ERROR Y LA CARGA */}

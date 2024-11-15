@@ -7,7 +7,7 @@ const AboutEvent = () => {
           ABOUT
         </h2>
         <div className="z-50">
-          <h3 className="font-light z-50 text-lg md:text-xl font-title text-subtitleSecondary">
+          <h3 className="font-light z-50 text-lg md:text-xl font-title text-subtitlePrimary">
             [ Sobre el Evento ]
           </h3>
           <h2 className="z-50 font-semibold text-2xl md:text-3xl ">
@@ -19,7 +19,7 @@ const AboutEvent = () => {
           commodi voluptate, eveniet exercitationem obcaecati quod ipsam
           doloribus vero non inventore debitis, quisquam ullam.{" "}
         </p>
-        <button className="border-white border-2 px-8 py-2 rounded-3xl font-semibold tracking-widest">
+        <button className="border-white border-2 px-8 py-2 rounded-3xl font-semibold tracking-widest hover:text-subtitleSecondary hover:border-subtitleSecondary">
           VER MÁS!
         </button>
       </div>
