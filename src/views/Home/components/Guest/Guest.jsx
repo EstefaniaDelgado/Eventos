@@ -1,9 +1,9 @@
 import CardGuest from "./components/CardGuest";
-import Singer1 from "/public/singer_1.jpg";
-import Singer2 from "/public/singer_2.jpg";
-import Singer3 from "/public/singer_3.jpg";
-import Singer4 from "/public/singer_4.jpg";
-import Singer5 from "/public/singer_5.jpg";
+import Singer1 from "@assets/guests/singer_1.jpg";
+import Singer2 from "@assets/guests/singer_2.jpg";
+import Singer3 from "@assets/guests/singer_3.jpg";
+// import Singer4 from "@assets/guests/singer_4.jpg";
+import Singer5 from "@assets/guests/singer_5.jpg";
 import Twitter from "/public/twitter.svg";
 import Facebook from "/public/facebook.svg";
 import Linkedin from "/public/linkedin.svg";
@@ -134,7 +134,7 @@ const Guest = () => {
 
   return (
     <section className="w-full bg-slate-900">
-      <section className="relative z-10 my-16 mx-5 w-11/12 max-w-[1200px] flex flex-col justify-center items-center gap-11 md:pl-5 xl:mx-auto">
+      <section className="relative z-10 py-16 mx-5 w-11/12 max-w-[1200px] flex flex-col justify-center items-center gap-11 md:pl-5 xl:mx-auto">
         <div className="pt-12 md:pt-16 xl:pt-24 flex flex-col justify-center items-center gap-5 md:flex-1">
           {" "}
           <h2 className="absolute top-2 text-7xl font-extrabold text-slate-950 md:text-8xl xl:text-9xl">
