@@ -17,9 +17,9 @@ const Footer = () => {
           entretenimiento.
         </p>
         <div className=" flex justify-center items-center py-3 gap-3">
-          {icons.map((icon) => {
+          {icons.map((icon,index) => {
             return (
-              <div className="bg-slate-900 border-2 border-slate-900 p-2 rounded-full hover:border-white hover:bg-transparent">
+              <div key={`icon-item-${index}`} className="bg-slate-900 border-2 border-slate-900 p-2 rounded-full hover:border-white hover:bg-transparent">
                 <img src={icon} alt="Icons" className=" w-4 h-4" />
               </div>
             );
