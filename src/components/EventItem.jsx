@@ -25,24 +25,16 @@ const EventItem = ({ name, id, info, img, onEventClick }) => {
   return (
     <div
       /* onClick={() => console.log('Padre cliqueado')} */ className=" max-auto text-center
-    pb-3 border-2 rounded-lg w-[263px] lg:w-auto md:h-[420px] flex flex-col items-center gap-2"
+    pb-3 border-2 rounded-lg w-[263px] xl:w-[374px] md:h-[470px] flex flex-col items-center gap-2"
     >
-      <div className="w-full  relative">
+      <div className="w-full h-[215px] relative">
         <img
           src={img}
           alt="Event Image"
-          // style={{ width: '100%', display: 'block' }}
-          // height={200}
-          className=" w-full rounded-t-lg md:h-full object-cover"
+          className=" w-full rounded-t-lg h-[215px] object-cover"
         />
         <img
           src={!isLiked ? HeartUnfilled : HeartFilled}
-          // style={{
-          //   position: 'absolute',
-          //   top: '10px',
-          //   left: '10px',
-          //   cursor: 'pointer',
-          // }}
           className='absolute top-4 left-3 cursor-pointer'
           alt="Corazón relleno"
           width={20}

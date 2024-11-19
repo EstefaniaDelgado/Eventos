@@ -24,6 +24,7 @@ const Events = () => {
   const { data, isLoading, error, fetchEvents } = useResults();
   const events = data._embedded?.events || [];
   const page = data?.page || {};
+  console.log(data)
 
   const refComp = useRef();
 
@@ -38,6 +39,7 @@ const Events = () => {
   };
 
   const handlePageClick = ({ selected }) => {
+    console.log(selected)
     fetchEvents(`&keyword=${searchTerm}&page=${selected}`);
   };
 
@@ -46,6 +48,8 @@ const Events = () => {
     console.log(id);
     navigate(`/detail/${id}`);
   };
+
+
 
   const renderEvents = () => {
     let eventsItems = events;
@@ -57,18 +61,21 @@ const Events = () => {
 
     if (isLoading) {
       return (
-        <p className="mt-5 p-3 text-xl text-center font-semibold bg-slate-500/25">
+        <p className="my-10 p-3 text-xl text-center font-semibold bg-slate-500/25">
           Cargando Eventos...
         </p>
       );
     }
 
     if (error) {
-      return <div>Ocurrio un error</div>;
+      return <p className="my-10 p-3 text-xl text-center font-semibold bg-slate-500/25">
+      Ocurrio un error  (˘･_･˘)
+    </p>
     }
+   
     return (
       <div className="mt-10 grid grid-cols-1  md:grid-cols-2 md:gap-10 lg:grid-cols-3 gap-5 place-items-center">
-        {eventsItems.map((event) => (
+        {eventsItems.length ? (eventsItems.map((event) => (
           <EventItem
             key={`event-item-${event.id}`}
             name={event.name}
@@ -77,13 +84,15 @@ const Events = () => {
             id={event.id}
             onEventClick={handleEventClick}
           />
-        ))}
+        ))):  <p className="my-10 w-full col-start-2 p-3 text-xl text-center font-semibold bg-slate-500/25">
+        No hay eventos!
+      </p>}
         <ReactPaginate
           breakLabel="..."
           nextLabel=">"
           onPageChange={handlePageClick}
           pageRangeDisplayed={5}
-          pageCount={page.totalPages}
+          pageCount={page.totalPages-53}
           previousLabel="<"
           renderOnZeroPageCount={null}
           className="pagination mb-16 py-3 w-full mx-auto flex justify-between font-semibold md:justify-around md:col-start-1 md:col-end-3 lg:col-end-4"
