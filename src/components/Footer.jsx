@@ -11,7 +11,7 @@ const Footer = () => {
     <section className="mt-5 px-2 pb-10 flex lg:flex-row flex-col items-center lg:items-start justify-center lg:justify-around gap-8 font-light">
       <article className="text-center lg:flex-[0.8] xl:flex-[0.5]">
         <h2 className="text-2xl font-bold">EVENTOS</h2>
-        <p className="mt-3 mx-auto font-light md:w-1/2 lg:w-auto">
+        <p className="mt-3 mx-auto font-light md:w-1/2 lg:text-start lg:w-auto">
           Contruyendo grandes productos. Hace pocos años comenzamos este
           proyecto para aprender de quienes han estado en esta industria del
           entretenimiento.
@@ -58,7 +58,7 @@ const Footer = () => {
     <section className="w-11/12 mx-auto py-3 border-t-2 border-slate-900 flex justify-center md:justify-start">
     <p className="text-slate-500 font-semibold 
     ">
-      Hecho con ♥ por Hans y Estefania.
+      Hecho con ♥ por Hans Urpay y Estefania Delgado.
     </p>
   </section>
    </>
