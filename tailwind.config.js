@@ -15,6 +15,7 @@ export default {
         artist: "url('../src/assets/artist.jpg')",
         counter: "url('../src/assets/background-counter-date.webp')",
         theater: "url('../src/assets/teather.jpg')",
+        party: "url('../src/assets/party_background.jpg')",
       },
       fontFamily: {
         header: ["Rock Salt", "cursive"],

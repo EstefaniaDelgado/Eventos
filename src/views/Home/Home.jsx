@@ -10,6 +10,8 @@ import Counter from "../Home/components/Schedule/components/Counter"
 import Calendar from "../Home/components/Schedule/components/Calendar/Calendar"
 import TicketEvent from "./components/TicketEvent/TicketEvent";
 import Guest from "./components/Guest/Guest";
+import News from "./components/News/News";
+import Statistics from "./components/Statistics/Statistics";
 
 
 const Home = () => {
@@ -99,8 +101,9 @@ const Home = () => {
     <Counter/>
     <Calendar/>
     <TicketEvent />
-   
     <Guest />
+    <Statistics />
+    <News />
 
     {/* 2. FORMA DE RENDERIZAR EL ERROR Y LA CARGA */}
      {/* {isLoading ? <div>Cargando resultados..</div>: <Events searchTerm={searchTerm} events={events}/>}
