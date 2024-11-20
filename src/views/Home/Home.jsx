@@ -22,12 +22,14 @@ const Home = () => {
   //Despues la informacion esta en una Store de manera global
   // const { data, isLoading, error, fetchEvents } = useResults();
   const { data, fetchEvents } = useResults();
-  const events = data._embedded?.events.slice(0,1) || [];
+  let events = data._embedded?.events.slice(0,1) || [];
+  let event= events[0]?.dates?.start?.dateTime || {}
   // const page = data?.page || {};
 
   useEffect(() => {
     fetchEvents();
   }, []);
+ 
   
 
   // const refComp = useRef();
@@ -95,7 +97,7 @@ const Home = () => {
       <Hero />
       <Slider />
       <AboutEvent />
-      <Counter events={events} />
+      <Counter event={event} events={events} />
       <Calendar />
       <TicketEvent />
       <Guest />

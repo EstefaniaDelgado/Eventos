@@ -1,4 +1,40 @@
-const Counter = () => {
+import {useState, useEffect} from 'react'
+
+
+const Counter = ({event, events}) => {
+
+  console.log(events)
+   
+  const [timeLeft, setTimeLeft] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 });
+
+   
+
+  useEffect(() => {
+    if (!event) return; // Asegúrate de que exista una fecha del evento
+
+    const calculateTimeLeft = () => {
+      const now = new Date();
+      const eventTime = new Date(event);
+      const difference = eventTime - now;
+
+      if (difference > 0) {
+        const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((difference / (1000 * 60 * 60)) % 24);
+        const minutes = Math.floor((difference / (1000 * 60)) % 60);
+        const seconds = Math.floor((difference / 1000) % 60);
+
+        setTimeLeft({ days, hours, minutes, seconds });
+      } else {
+        setTimeLeft({ days: 0, hours: 0, minutes: 0, seconds: 0 });
+      }
+    };
+
+    const interval = setInterval(calculateTimeLeft, 1000);
+
+    return () => clearInterval(interval); // Limpieza del intervalo
+  }, [event]);
+
+
   return (
     <div className="h-[535px]  md:h-[800px] relative flex flex-col">
       <section className="bg-counter pt-10 pb-16 md:pt-14 md:pb-40">
@@ -12,7 +48,7 @@ const Counter = () => {
             {" "}
             <div className="lg:mr-8">
               <p className="text-4xl font-semibold md:text-5xl lg:text-7xl ">
-                340
+                {timeLeft.days}
               </p>
               <p className="text-subtitlePrimary md:text-xl lg:text-2xl self-end md:mt-5">
                 [Días]
@@ -21,7 +57,7 @@ const Counter = () => {
             <strong className="text-4xl lg:text-6xl  md:self-start ">:</strong>
             <div>
               <p className="text-4xl lg:text-7xl font-semibold md:text-5xl">
-                18
+               {timeLeft.hours}
               </p>
               <p className="text-subtitlePrimary  md:text-xl lg:text-2xl md:mt-5">
                 [Horas]
@@ -32,7 +68,7 @@ const Counter = () => {
             </strong>
             <div>
               <p className="text-4xl lg:text-7xl font-semibold md:text-5xl">
-                13
+                {timeLeft.minutes}
               </p>
               <p className="text-subtitlePrimary  md:text-xl lg:text-2xl md:mt-5">
                 [Minutos]
@@ -41,7 +77,7 @@ const Counter = () => {
             <strong className="text-4xl lg:text-6xl md:self-start">:</strong>
             <div>
               <p className="text-4xl lg:text-7xl font-semibold md:text-5xl">
-                13
+               {timeLeft.seconds}
               </p>
               <p className="text-subtitlePrimary  md:text-xl lg:text-2xl md:mt-5">
                 [Segundos]
@@ -50,7 +86,8 @@ const Counter = () => {
           </article>
         </div>
       </section>
-      <div className="absolute w-5/6  max-w-[1200px] h-52 md:h-[550px] bottom-0 md:bottom-3  lg:bottom-0 right-1/2 transform translate-x-1/2 bg-theater bg-no-repeat bg-center bg-cover rounded"></div>
+      {/* <div className="absolute w-5/6  max-w-[1200px] h-52 md:h-[550px] bottom-0 md:bottom-3  lg:bottom-0 right-1/2 transform translate-x-1/2 bg-theater bg-no-repeat bg-center bg-cover rounded"></div> */}
+      <img src={events[0]?.images[0]?.url} className="absolute w-5/6  max-w-[1200px] h-52 md:h-[550px] bottom-0 md:bottom-3  lg:bottom-0 right-1/2 transform translate-x-1/2 rounded"></img>
     </div>
   );
 };
