@@ -87,7 +87,7 @@ const Counter = ({event, events}) => {
         </div>
       </section>
       {/* <div className="absolute w-5/6  max-w-[1200px] h-52 md:h-[550px] bottom-0 md:bottom-3  lg:bottom-0 right-1/2 transform translate-x-1/2 bg-theater bg-no-repeat bg-center bg-cover rounded"></div> */}
-      <img src={events[0].images[0]?.url} className="absolute w-5/6  max-w-[1200px] h-52 md:h-[550px] bottom-0 md:bottom-3  lg:bottom-0 right-1/2 transform translate-x-1/2 rounded"></img>
+      <img src={events[0]?.images[0]?.url} className="absolute w-5/6  max-w-[1200px] h-52 md:h-[550px] bottom-0 md:bottom-3  lg:bottom-0 right-1/2 transform translate-x-1/2 rounded"></img>
     </div>
   );
 };
