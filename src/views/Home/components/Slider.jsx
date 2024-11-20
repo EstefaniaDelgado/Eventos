@@ -43,7 +43,7 @@ const Slider = () => {
     fetchEvents();
   }, []);
 
-  console.log(events);
+  
 
   const handleExpandClick = () => {
     setExpanded(!expanded);

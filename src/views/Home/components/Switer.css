@@ -4,7 +4,7 @@
   }
   
   .custom-pagination .swiper-pagination-bullet-active {
-    background-color: green; /* Color verde solo para el punto activo */
+    background-color: #be185d; /* Color verde solo para el punto activo */
   }
 
   .truncate-text {

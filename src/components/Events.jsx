@@ -24,7 +24,7 @@ const Events = () => {
   const { data, isLoading, error, fetchEvents } = useResults();
   const events = data._embedded?.events || [];
   const page = data?.page || {};
-  console.log(data)
+
 
   const refComp = useRef();
 

@@ -9,17 +9,24 @@ import {
   Menu,
   MenuItem,
   Tooltip,
-  Avatar
+  Avatar,
 } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import AdbIcon from '@mui/icons-material/Adb';
+import { Link, useNavigate } from 'react-router-dom';
 
-const pages = ['Eventos', 'Sobre Nosotros', 'Perfil'];
+const pages = [
+  { name: 'Eventos', path: '/events' },
+  // { name: 'Sobre Nosotros', path: '/about-us' },
+  { name: 'Perfil', path: '/profile' },
+];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
 function NavbarMenu() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
+
+  const navigate = useNavigate();
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
@@ -36,6 +43,11 @@ function NavbarMenu() {
     setAnchorElUser(null);
   };
 
+  const handleClickItemMenu = (path) => {
+    console.log(path)
+    navigate(path);
+  };
+
   return (
     <AppBar position="sticky" className="bg-black/50">
       <Container maxWidth="xl">
@@ -43,7 +55,6 @@ function NavbarMenu() {
           <Typography
             variant="h6"
             noWrap
-            component="a"
             href="#app-bar-with-responsive-menu"
             sx={{
               mr: 2,
@@ -56,7 +67,7 @@ function NavbarMenu() {
             }}
             className="text-3xl"
           >
-            EVENTOS
+           <Link to={'/'}> EVENTOS</Link>
           </Typography>
 
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
@@ -87,8 +98,16 @@ function NavbarMenu() {
               sx={{ display: { xs: 'block', md: 'none' } }}
             >
               {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography sx={{ textAlign: 'center' }}>{page}</Typography>
+                <MenuItem
+                  key={`page-item-${page.name}`}
+                  onClick={handleCloseNavMenu}
+                >
+                  <Typography
+                    sx={{ textAlign: 'center' }}
+                    onClick={() => handleClickItemMenu(page.path)}
+                  >
+                    {page.name}
+                  </Typography>
                 </MenuItem>
               ))}
             </Menu>
@@ -98,7 +117,6 @@ function NavbarMenu() {
           <Typography
             variant="h5"
             noWrap
-            component="a"
             href="#app-bar-with-responsive-menu"
             sx={{
               mr: 2,
@@ -111,22 +129,24 @@ function NavbarMenu() {
               textDecoration: 'none',
             }}
           >
-            EVENTOS
+            <Link to={'/'}>EVENTOS</Link>
           </Typography>
 
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             {pages.map((page) => (
               <Typography
-                key={page}
+                key={`page-item-${page.name}`}
                 component="a"
-                href={`#${page}`}
-                className="transition-all duration-300 text-white hover:text-green-500 hover:shadow-none hover:[text-shadow:_0px_0px_10px_#00ff00] focus:text-green-500 focus:[text-shadow:_0px_0px_10px_#00ff00] cursor-pointer mx-4"
+                href={`#${page.path}`}
+                className="transition-all duration-300 text-white hover:text-itemsMenu hover:shadow-none hover:[text-shadow:_0px_0px_10px_#00ff00] focus:text-itemsMenu focus:[text-shadow:_0px_0px_10px_#00ff00] cursor-pointer mx-4"
+                onClick={()=>handleClickItemMenu(page.path)}
               >
-                {page}
+                {page.name}
               </Typography>
             ))}
           </Box>
-
+          {/* MENU DEL USER */}
+{/*    
           <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Open settings">
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
@@ -157,7 +177,7 @@ function NavbarMenu() {
                 </MenuItem>
               ))}
             </Menu>
-          </Box>
+          </Box> */}
         </Toolbar>
       </Container>
     </AppBar>

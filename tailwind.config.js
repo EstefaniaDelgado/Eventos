@@ -8,6 +8,7 @@ export default {
         subtitlePrimary: "#be185d", // pink
         subtitleSecondary: "#9333ea", // purple
         subtitleMuted: "#1c5d54", // greenJungle
+        itemsMenu:"rgb(193 133 3)" //yellow
       },
       backgroundImage: {
         "hero-image":
