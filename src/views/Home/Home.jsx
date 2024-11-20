@@ -20,27 +20,29 @@ const Home = () => {
   //const { events, isLoading, error, fecthEvents, page } = useEventsData();
 
   //Despues la informacion esta en una Store de manera global
-  const { data, isLoading, error, fetchEvents } = useResults();
-  const events = data._embedded?.events || [];
-  const page = data?.page || {};
+  // const { data, isLoading, error, fetchEvents } = useResults();
+  const { data, fetchEvents } = useResults();
+  const events = data._embedded?.events.slice(0,1) || [];
+  // const page = data?.page || {};
 
   useEffect(() => {
     fetchEvents();
   }, []);
+  
 
-  const refComp = useRef();
+  // const refComp = useRef();
 
   //console.log(refComp.current)
 
-  const handleSearchEvent = (nameEvent) => {
-    refComp.current.setSearch('');
-    setSeacrhTerm(nameEvent);
-    fetchEvents(`&keyword=${nameEvent}`);
-  };
+  // const handleSearchEvent = (nameEvent) => {
+  //   refComp.current.setSearch('');
+  //   setSeacrhTerm(nameEvent);
+  //   fetchEvents(`&keyword=${nameEvent}`);
+  // };
 
-  const handlePageClick = ({ selected }) => {
-    fetchEvents(`&keyword=${searchTerm}&page=${selected}`);
-  };
+  // const handlePageClick = ({ selected }) => {
+  //   fetchEvents(`&keyword=${searchTerm}&page=${selected}`);
+  // };
 
   //1.FORMA MOSTRAR LA CARGA Y LOS ERRORES
   // if(isLoading){
@@ -52,34 +54,34 @@ const Home = () => {
   //  }
 
   //3.FORMA DE RENDERIZAR EL ERROR Y LA CARGA Y AGREGANDO PAGINACIÓN
-  const renderEvents = () => {
-    if (isLoading) {
-      return <div>Cargando resultados...</div>;
-    }
+  // const renderEvents = () => {
+  //   if (isLoading) {
+  //     return <div>Cargando resultados...</div>;
+  //   }
 
-    if (error) {
-      return <div>Ocurrio un error</div>;
-    }
-    return (
-      <div>
-        <Events searchTerm={searchTerm} events={events} />
-        <ReactPaginate
-          breakLabel="..."
-          nextLabel=">"
-          onPageChange={handlePageClick}
-          pageRangeDisplayed={5}
-          pageCount={page.totalPages}
-          previousLabel="<"
-          renderOnZeroPageCount={null}
-          className="pagination"
-          pageClassName="page"
-          nextClassName="next"
-          previousClassName="previous"
-          activeClassName="activePage"
-        />
-      </div>
-    );
-  };
+  //   if (error) {
+  //     return <div>Ocurrio un error</div>;
+  //   }
+  //   return (
+  //     <div>
+  //       <Events searchTerm={searchTerm} events={events} />
+  //       <ReactPaginate
+  //         breakLabel="..."
+  //         nextLabel=">"
+  //         onPageChange={handlePageClick}
+  //         pageRangeDisplayed={5}
+  //         pageCount={page.totalPages}
+  //         previousLabel="<"
+  //         renderOnZeroPageCount={null}
+  //         className="pagination"
+  //         pageClassName="page"
+  //         nextClassName="next"
+  //         previousClassName="previous"
+  //         activeClassName="activePage"
+  //       />
+  //     </div>
+  //   );
+  // };
 
   return (
     <>
@@ -93,7 +95,7 @@ const Home = () => {
       <Hero />
       <Slider />
       <AboutEvent />
-      <Counter />
+      <Counter events={events} />
       <Calendar />
       <TicketEvent />
       <Guest />
