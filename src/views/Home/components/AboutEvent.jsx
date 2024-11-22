@@ -24,10 +24,29 @@ const AboutEvent = () => {
         </button>
       </div>
 
-      <div className="flex flex-col items-center gap-2 mt-5 md:w-full md:mt-0 md:flex-1 md:pl-5">
+      {/* <div className="flex flex-col items-center gap-2 mt-5 md:w-full md:mt-0 md:flex-1 md:pl-5">
         <div className=" h-16 md:h-20  lg:h-24 w-4/5 max-w-[268px] md:max-w-none  lg:ml-16 lg:w-4/6 bg-artist bg-top bg-cover rounded-lg "></div>
         <div className=" h-16 mr-12 md:mr-4  md:h-20  lg:h-24  w-4/5 max-w-[223px] md:max-w-none rounded-lg self-end    bg-artist bg-center bg-cover"></div>
         <div className=" h-16 md:h-20  lg:h-24 rounded-lg w-4/5 max-w-[268px] md:max-w-none   lg:ml-16 lg:w-4/6 bg-artist bg-bottom bg-cover"></div>
+      </div> */}
+      <div className="relative items-center gap-2 mt-5 md:w-full md:mt-0 md:flex-1 md:h-96 bg-black">
+        {/* Contenedor de las ventanas */}
+        <div className="relative z-10 flex flex-col items-center justify-center gap-4 h-full mx-auto max-w-[450px]">
+          {/* Ventana 1 */}
+          <div className="h-16 md:h-20 lg:h-24 w-4/5 rounded-lg self-start ml-8 overflow-hidden">
+            <div className="h-full w-full bg-artist bg-cover bg-[18px_top] md:bg-[15px_top]"></div>
+          </div>
+
+          {/* Ventana 2 */}
+          <div className="h-16 md:h-20 lg:h-24 w-4/5 rounded-lg self-center ml-7 overflow-hidden">
+            <div className="h-full w-full bg-artist bg-cover bg-[6px_center] min-[425px]:bg-[-3px_center] lg:bg-[-15px_65%]"></div>
+          </div>
+
+          {/* Ventana 3 */}
+          <div className="h-16 md:h-20 lg:h-24 rounded-lg w-4/5 self-start ml-4 overflow-hidden">
+            <div className="h-full w-full bg-artist bg-cover bg-[32px_bottom] md:bg-[20px_60px]"></div>
+          </div>
+        </div>
       </div>
     </section>
   );
