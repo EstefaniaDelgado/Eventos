@@ -133,10 +133,9 @@ const Guest = () => {
   ));
 
   return (
-    <section className="w-full bg-slate-900">
-      <section className="relative z-10 py-16 mx-5 w-11/12 max-w-[1200px] flex flex-col justify-center items-center gap-11 md:pl-5 xl:mx-auto">
+    <section className="w-full bg-slate-900 py-16">
+      <section className="relative z-10 mx-auto w-11/12 max-w-[1200px] flex flex-col justify-center items-center gap-11 md:pl-5 xl:mx-auto">
         <div className="pt-12 md:pt-16 xl:pt-24 flex flex-col justify-center items-center gap-5 md:flex-1">
-          {" "}
           <h2 className="absolute top-2 text-7xl font-extrabold text-slate-950 md:text-8xl xl:text-9xl">
             GUESTS
           </h2>
@@ -153,7 +152,7 @@ const Guest = () => {
             </p>
           </div>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-12 my-6">
+        <div className="w-full grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-12 my-6">
           {guestCards}
         </div>
       </section>

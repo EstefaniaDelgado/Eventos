@@ -25,18 +25,18 @@ const MembershipCard = ({ data }) => {
   ));
 
   return (
-    <div className="inline-block  rounded-xl shadow-xl my-2">
-      <div className="relative rounded-t-xl h-44 flex flex-col gap-2 items-center justify-center bg-gray-900">
+    <div className="group inline-block rounded-xl shadow-xl my-2 max-w-80">
+      <div className="group-hover:bg-fuchsia-400 z-40 group-hover:opacity-90 relative rounded-t-xl h-44 flex flex-col gap-2 items-center justify-center bg-gray-900">
         <div className="absolute top-0 -translate-y-1/2 h-12 w-12 rounded-full bg-black"></div>
-        <h2 className="text-5xl font-bold text-fuchsia-400 opacity-80">
+        <h2 className="group-hover:text-white text-5xl font-bold text-fuchsia-400 opacity-80">
           {data.price}
         </h2>
-        <p className="text-subtitlePrimary font-medium">
+        <p className="text-subtitlePrimary font-medium group-hover:text-white">
           [ {data.membershipLevel} ]
         </p>
         <div className="cursor-default flex items-center justify-center gap-2 font-medium absolute z-50 bottom-0 translate-y-1/2 bg-blue-950 text-white px-4 py-2 rounded-2xl mt-4">
           <svg
-            xmlns="XXXXXXXXXXXXXXXXXXXXXXXXXX"
+            xmlns="http://www.w3.org/2000/svg"
             fill="none"
             viewBox="0 0 24 24"
             strokeWidth={1.5}
