@@ -21,7 +21,7 @@ const CardGuest = ({ name, image, profession, socialNetworks }) => {
             className="rounded-full w-full h-full object-cover object-center"
           />
         </div>
-        <ul className="absolute -bottom-6 grid grid-cols-4 p-4 bg-indigo-950 justify-items-center rounded-3xl w-4/5">
+        <ul className="absolute max-w-80 -bottom-6 grid grid-cols-4 p-4 bg-indigo-950 justify-items-center rounded-3xl w-4/5">
           {socialNetworksList}
         </ul>
       </div>
