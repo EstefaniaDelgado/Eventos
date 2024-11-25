@@ -51,7 +51,7 @@ const Counter = ({ event, events }) => {
     >
       <section className="bg-counter pt-10  pb-16 md:pt-14 md:pb-40">
         <div className=" mx-auto lg:mt-8 w-11/12 max-w-[1200px] flex flex-col md:flex-row md:justify-around items-center">
-          <h2 className="text-2xl mt-8 text-center md:text-start lg:text-start font-semibold p-5 md:p-0 md:flex-[0.5] xl:text-3xl ">
+          <h2 className="text-2xl mt-2 text-center md:text-start lg:text-start font-semibold p-5 md:p-0 md:flex-[0.5] xl:text-3xl ">
             Conteo de cada{' '}
             <strong className="text-subtitleSecondary">segundo</strong> antes
             del <strong className="text-subtitleSecondary">Evento</strong>
