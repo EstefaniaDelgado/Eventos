@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import ConfettiExplosion from 'react-confetti-explosion';
 
 const Counter = ({ event, events }) => {
-  console.log(events);
+ 
 
   const [timeLeft, setTimeLeft] = useState({
     days: 0,
