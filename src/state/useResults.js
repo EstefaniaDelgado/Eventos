@@ -1,4 +1,5 @@
 import { create } from 'zustand';
+const API_KEY = import.meta.env.VITE_TICKETMASTER_API_KEY;
 
 const useResults = create((set) => ({
   data: [],
@@ -7,7 +8,7 @@ const useResults = create((set) => ({
   fetchEvents: async (params) => {
     try {
       const response = await fetch(
-        `https://app.ticketmaster.com/discovery/v2/events.json?apikey=Q3ZlIxi2udPG9SrzsiHzwHZVsAWwBann&countryCode=MX${
+        `https://app.ticketmaster.com/discovery/v2/events.json?apikey=${API_KEY}&countryCode=MX${
           params ? params : ''
         }`
       );
@@ -26,9 +27,7 @@ const useResults = create((set) => ({
     try {
       await set(() => ({ isLoadingDetail: false }));
       const eventDetail = await fetch(
-        `https://app.ticketmaster.com/discovery/v2/events/${id}?apikey=${
-          import.meta.env.VITE_TICKETMASTER_API_KEY
-        }`
+        `https://app.ticketmaster.com/discovery/v2/events/${id}?apikey=${API_KEY}`
       );
       const response = await eventDetail.json();
       await set(() => ({ detailEvent: response }));

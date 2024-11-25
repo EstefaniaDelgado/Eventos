@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import ConfettiExplosion from 'react-confetti-explosion';
+import Teather from '../../../../../assets/teather.jpg'
 
 const Counter = ({ event, events }) => {
  
@@ -154,7 +155,7 @@ const Counter = ({ event, events }) => {
       </section>
       {/* <div className="absolute w-5/6  max-w-[1200px] h-52 md:h-[550px] bottom-0 md:bottom-3  lg:bottom-0 right-1/2 transform translate-x-1/2 bg-theater bg-no-repeat bg-center bg-cover rounded"></div> */}
       <img
-        // src={events[0]?.images[0]?.url}
+        src={Teather}
         className="absolute w-5/6  max-w-[1200px] h-52 md:h-[550px] bottom-0 md:bottom-3  lg:bottom-0 right-1/2 transform translate-x-1/2 rounded"
       ></img>
       <div className="w-10/12 md:w-1/2 absolute top-0 right-1/2 transform translate-x-1/2 py-3 z-20 font-semibold  text-center text-xl bg-slate-400/30 md:text-3xl ">
