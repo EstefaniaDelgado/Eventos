@@ -55,7 +55,10 @@ const Detail = () => {
 
   return (
     <div>
-      <figure>
+        <p className="text-xl text-center font-semibold bg-slate-500/25 px-3 py-5">
+            Vista en desarrollo..👨🏻‍💻
+          </p>
+      {/* <figure>
         {' '}
         <img
           className="image-detail"
@@ -91,7 +94,7 @@ const Detail = () => {
       </div>
       <a href={detailEvent.url} target="_blank">
         Ir por tus boletos
-      </a>
+      </a> */}
     </div>
   );
 };

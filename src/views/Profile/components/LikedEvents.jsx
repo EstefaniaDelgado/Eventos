@@ -10,7 +10,7 @@ const LikedEvents = () => {
 
   const navegate = useNavigate();
 
-  console.log('eventos que fav: ', likedEvents);
+  // console.log('eventos que fav: ', likedEvents);
 
   const handleEventClick = (id) => {
     navegate(`/detail/${id}`);
