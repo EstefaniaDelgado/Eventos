@@ -18,7 +18,7 @@ const Detail = () => {
   //2. usando un state global con zustand
   const{detailEvent, isLoadingDetail, errorDetail, fetchEventDetail}=useResults()
 
-  console.log(isLoadingDetail)
+  // console.log(isLoadingDetail)
 
   useEffect(() => {
     //HACIENDO EL LLAMADO DIRECTAMENTE EN EL COMPONENTE

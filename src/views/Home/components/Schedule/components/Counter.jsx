@@ -4,7 +4,7 @@ import Teather from '../../../../../assets/teather.jpg'
 
 const Counter = ({ event, events }) => {
  
-  console.log(events)
+  // console.log(events)
 
   const [timeLeft, setTimeLeft] = useState({
     days: 0,
