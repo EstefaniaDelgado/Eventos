@@ -168,7 +168,8 @@ const Calendar = () => {
           <Box
             sx={{
               flexGrow: 1,
-              maxWidth: { xs: 290, sm: 700, md: 900, lg: 12000 },
+              maxWidth: { xs: 290, sm: 700, md: 900, lg: 1000 },
+             
               bgcolor: 'transparent',
             }}
             className="mx-auto mt-7"
