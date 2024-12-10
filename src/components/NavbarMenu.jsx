@@ -48,7 +48,6 @@ function NavbarMenu() {
   };
 
   const handleClickItemMenu = (path) => {
-    console.log(path);
     navigate(path);
   };
 
