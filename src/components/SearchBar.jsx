@@ -2,22 +2,26 @@ import React, { forwardRef, useImperativeHandle, useRef, useState } from 'react'
 
 const SearchBar = forwardRef(({ onSearchEvent }, ref) => {
   const [search, setSearch] = useState('');
- 
+
   useImperativeHandle(ref, ()=>({
     search,
     setSearch
   }))
   
 
-  const handleInputChange = (e) => {
-    setSearch(e.target.value);
-  };
+  // const handleInputChange = (e) => {
+  //   setSearch(e.target.value);
+  // };
 
   const handleSearchBtn = (e) => {
-    if (e.key === 'Enter') {
-      onSearchEvent(search);
-      setSearch('');
-    }
+    const searchTerm = e.target.value;
+    setSearch(searchTerm);
+    // // if (e.key === 'Enter') {
+    // //   onSearchEvent(search);
+    // //   setSearch('');
+    // // } 
+   onSearchEvent(searchTerm);
+    // setSearch('');
   };
 
 
@@ -30,10 +34,10 @@ const SearchBar = forwardRef(({ onSearchEvent }, ref) => {
      <input
         type="text"
         placeholder="[ Busca tu evento..]"
-        className="font-title text-xl block mx-auto bg-transparent border-b-2 border-subtitlePrimary"
-        onChange={handleInputChange}
+         className="font-title text-xl block mx-auto bg-transparent border-b-2 border-subtitlePrimary focus:outline-none focus:border-white caret-subtitlePrimary placeholder-gray-500"
+        onChange={handleSearchBtn}
         value={search}
-        onKeyDown={handleSearchBtn}
+        // onKeyDown={handleSearchBtn}
       />
      </div>
     </div>
