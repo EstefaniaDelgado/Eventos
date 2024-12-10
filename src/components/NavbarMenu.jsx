@@ -14,11 +14,15 @@ import {
 import MenuIcon from "@mui/icons-material/Menu";
 import AdbIcon from "@mui/icons-material/Adb";
 import { Link, useNavigate } from "react-router-dom";
+import PrimaryButton from "./PrimaryButton";
 
 const pages = [
   { name: "Eventos", path: "/events" },
   // { name: 'Sobre Nosotros', path: '/about-us' },
   { name: "Perfil", path: "/profile" },
+  { name: "Blog", path: "" },
+  { name: "Tienda", path: "" },
+  { name: "Contacto", path: "" },
 ];
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
@@ -49,7 +53,7 @@ function NavbarMenu() {
   };
 
   return (
-    <AppBar position="sticky" className="bg-black/50">
+    <AppBar position="sticky" className="bg-black/50 py-3">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           {/* Mobile Navbar */}
@@ -90,7 +94,7 @@ function NavbarMenu() {
                     sx={{ textAlign: "center" }}
                     onClick={() => handleClickItemMenu(page.path)}
                   >
-                    {page.name + " mobile"}
+                    {page.name}
                   </Typography>
                 </MenuItem>
               ))}
@@ -113,7 +117,7 @@ function NavbarMenu() {
               textDecoration: "none",
             }}
           >
-            <Link to={"/"}>EVENTOS mobile</Link>
+            <Link to={"/"}>EVENTOS</Link>
           </Typography>
 
           {/* Desktop Navbar */}
@@ -137,7 +141,13 @@ function NavbarMenu() {
           </Typography>
 
           {/* Menu desktop */}
-          <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
+          <Box
+            sx={{
+              flexGrow: 1,
+              display: { xs: "none", md: "flex" },
+              justifyContent: "space-evenly",
+            }}
+          >
             {pages.map((page) => (
               <Typography
                 key={`page-item-${page.name}`}
@@ -150,8 +160,13 @@ function NavbarMenu() {
               </Typography>
             ))}
           </Box>
-          {/* MENU DEL USER */}
-          {/*    
+
+          {/* Get Ticket Button */}
+          <div className="hidden lg:block">
+            <PrimaryButton />
+          </div>
+
+          {/* MENU DEL USER
           <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Open settings">
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
@@ -159,24 +174,24 @@ function NavbarMenu() {
               </IconButton>
             </Tooltip>
             <Menu
-              sx={{ mt: '45px' }}
+              sx={{ mt: "45px" }}
               id="menu-appbar"
               anchorEl={anchorElUser}
               anchorOrigin={{
-                vertical: 'top',
-                horizontal: 'right',
+                vertical: "top",
+                horizontal: "right",
               }}
               keepMounted
               transformOrigin={{
-                vertical: 'top',
-                horizontal: 'right',
+                vertical: "top",
+                horizontal: "right",
               }}
               open={Boolean(anchorElUser)}
               onClose={handleCloseUserMenu}
             >
               {settings.map((setting) => (
                 <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                  <Typography sx={{ textAlign: 'center' }}>
+                  <Typography sx={{ textAlign: "center" }}>
                     {setting}
                   </Typography>
                 </MenuItem>
