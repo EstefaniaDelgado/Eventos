@@ -1,10 +1,11 @@
 import { useState, useEffect } from 'react';
+import {Link} from 'react-router-dom'
 import Box from '@mui/material/Box';
 import Tabs, { tabsClasses } from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import useResults from '../../../../../../state/useResults';
 import truncateText from '../../../../../../utils/truncateText';
-import format from 'date-fns/format';
+import { parse, format } from 'date-fns';
 import { es } from 'date-fns/locale';
 import Sponsor1 from '../../../../../../assets/sponsors/sponsor1.png';
 import Sponsor2 from '../../../../../../assets/sponsors/sponsor2.png';
@@ -28,14 +29,22 @@ const TabPanel = ({ children, value, index }) => {
   );
 };
 
+const convertTo12HourFormat = (time24) => {
+  // Convertir la cadena "20:00:00" a un objeto Date
+  const timeAsDate = parse(time24, 'HH:mm:ss', new Date());
+  // Formatear la fecha al formato de 12 horas con AM/PM
+  return format(timeAsDate, 'hh:mm a');
+};
+
 const Calendar = () => {
   const [value, setValue] = useState(0);
   const [dateTap, setDateTap] = useState('');
 
   //Información api:
   const { data, isLoading, error, fetchEvents } = useResults();
-
+ console.log(data)
   let events = data._embedded?.events || [];
+
 
   const eventsDates = events.map((event) => {
     return event.dates?.start?.localDate;
@@ -100,8 +109,8 @@ const Calendar = () => {
                 key={`event-item-${event.id}`}
                 className="mt-5 flex flex-col md:flex-row items-center lg:justify-evenly gap-2 text-center"
               >
-                <strong className="hidden  md:block w-[15%] xl:text-xl">
-                  {event.dates?.start?.localTime}
+                <strong className="hidden md:block w-[15%] xl:text-xl">
+                  {convertTo12HourFormat(event.dates?.start?.localTime)}
                 </strong>
 
                 <div className="order-1 text-start md:w-2/5 ml-1 xl:text-xl">
@@ -123,7 +132,7 @@ const Calendar = () => {
                 </figure>
 
                 <button className="border-white  order-2 border-2 px-4 py-1 md:py-2 text-[10px] lg:text-sm rounded-3xl font-semibold tracking-widest hover:text-subtitleSecondary hover:border-subtitleSecondary">
-                  READ MORE
+                 <Link to={`/detail/${event.id}`}>READ MORE</Link>
                 </button>
               </div>
             );
@@ -144,10 +153,17 @@ const Calendar = () => {
       </p>
     );
   }
+  if(isLoading){
+    return (
+      <p className="text-xl font-semibold bg-slate-500/25 px-3 py-5">
+      Cargando Calendario de Eventos...
+    </p>
+    )
+  }
 
   return (
     <div className="w-full">
-      <section className="relative z-10  my-16   md:flex md:items-center md:gap-5 xl:mx-auto">
+      <section className="relative z-10  my-16 md:flex md:items-center md:gap-5 xl:mx-auto ">
         <div className="pt-8 md:pt-16 xl:pt-24 flex flex-col justify-end items-center gap-5 md:flex-1">
           <h2 className="absolute top-2 t text-5xl font-extrabold text-gray-900 md:text-8xl xl:text-9xl">
             SCHEDULE
@@ -168,8 +184,7 @@ const Calendar = () => {
           <Box
             sx={{
               flexGrow: 1,
-              maxWidth: { xs: 290, sm: 700, md: 900, lg: 1000 },
-             
+              maxWidth: { xs: 290, sm: 700, md: 900, lg: 1300 },
               bgcolor: 'transparent',
             }}
             className="mx-auto mt-7"

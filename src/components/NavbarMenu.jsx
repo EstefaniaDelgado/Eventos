@@ -104,7 +104,6 @@ function NavbarMenu() {
           <Typography
             variant="h5"
             noWrap
-            href="#app-bar-with-responsive-menu"
             sx={{
               mr: 2,
               display: { xs: "flex", md: "none" },
@@ -124,7 +123,6 @@ function NavbarMenu() {
           <Typography
             variant="h6"
             noWrap
-            href="#app-bar-with-responsive-menu"
             sx={{
               mr: 2,
               display: { xs: "none", md: "flex" },
@@ -151,7 +149,6 @@ function NavbarMenu() {
               <Typography
                 key={`page-item-${page.name}`}
                 component="a"
-                href={`#${page.path}`}
                 className="transition-all duration-300 text-white hover:text-itemsMenu hover:shadow-none hover:[text-shadow:_0px_0px_10px_#00ff00] focus:text-itemsMenu focus:[text-shadow:_0px_0px_10px_#00ff00] cursor-pointer mx-4"
                 onClick={() => handleClickItemMenu(page.path)}
               >
