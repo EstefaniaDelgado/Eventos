@@ -7,6 +7,7 @@ import Profile from '../views/Profile/Profile';
 import MyInfo from '../views/Profile/components/MyInfo/MyInfo';
 import LikedEvents from '../views/Profile/components/LikedEvents';
 import Layout from '../views/Layout/Layout';
+import Register from '../views/Register'
 
 
 const router = createBrowserRouter([
@@ -22,6 +23,10 @@ const router = createBrowserRouter([
       {
         path: '/events',
         element: <Events/>,
+      },
+      {
+        path:'/register',
+        element:<Register/>
       },
       {
         path: '/detail/:id',

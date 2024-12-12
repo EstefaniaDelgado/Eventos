@@ -14,7 +14,7 @@ const Profile = () => {
 
   return (
     <div>
-      <Link to={'/'}>Inicio</Link>
+      {/* <Link to={'/'}>Inicio</Link> */}
       <div className={styles.container}>
       <span
           className={`${
@@ -32,6 +32,19 @@ const Profile = () => {
         >
           Mis Eventos Favoritos
         </span>
+      </div>
+      <div className="relative  text-center pt-12 md:pt-16 xl:pt-24 flex flex-col justify-center items-center gap-5 md:flex-1">
+        <h2 className="absolute top-2 text-7xl font-extrabold text-gray-900 md:text-8xl xl:text-9xl">
+         PROFILE
+        </h2>
+        <div className="z-50">
+          <h3 className="font-light z-50 text-lg md:text-xl font-title text-subtitlePrimary">
+            [ Email ]
+          </h3>
+          {/* <h2 className="z-50 font-semibold text-2xl md:text-3xl">
+            Guardar tus eventos favoritos
+          </h2> */}
+        </div>
       </div>
       <Outlet />
     </div>

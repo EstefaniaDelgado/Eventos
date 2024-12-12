@@ -54,7 +54,7 @@ const Footer = () => {
             type="text"
             placeholder="Tu correo.."
             // className="bg-transparent border-b-2 border-slate-900"
-            className="font-title block mx-auto bg-transparent border-b-2 border-subtitlePrimary focus:outline-none focus:border-white caret-subtitlePrimary placeholder-gray-500"
+            className="font-title block mx-auto bg-transparent  border-b-2 border-subtitlePrimary focus:outline-none focus:border-white caret-subtitlePrimary placeholder-gray-500"
           />
           <button className="border-2 border-subtitlePrimary bg-subtitlePrimary  px-8 py-2 rounded-3xl font-semibold tracking-widest hover:border-white hover:bg-transparent">
             Suscribete
