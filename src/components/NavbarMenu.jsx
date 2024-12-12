@@ -19,7 +19,7 @@ import PrimaryButton from "./PrimaryButton";
 const pages = [
   { name: "Eventos", path: "/events" },
   // { name: 'Sobre Nosotros', path: '/about-us' },
-  { name: "Perfil", path: "/profile" },
+  { name: "Registrarme", path: "/register" },
   { name: "Blog", path: "" },
   { name: "Tienda", path: "" },
   { name: "Contacto", path: "" },
