@@ -15,7 +15,7 @@ const Counter = ({ event, events }) => {
   const [eventStarted, setEventStarted] = useState(false);
 
   useEffect(() => {
-    if (!event) return; // Asegúrate de que exista una fecha del evento
+    if (!event) return; 
 
     const calculateTimeLeft = () => {
       const now = new Date();

@@ -42,7 +42,7 @@ const Calendar = () => {
 
   //Información api:
   const { data, isLoading, error, fetchEvents } = useResults();
- console.log(data)
+ 
   let events = data._embedded?.events || [];
 
 

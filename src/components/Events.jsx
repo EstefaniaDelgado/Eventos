@@ -44,7 +44,7 @@ const Events = () => {
   };
 
   const handlePageClick = ({ selected }) => {
-    console.log(selected);
+    // console.log(selected);
     fetchEvents(`&keyword=${searchTerm}&page=${selected}`);
   };
 

@@ -42,7 +42,7 @@ const Detail = () => {
     fetchEventDetail(id)
   }, []);
 
-  console.log(detailEvent)
+  
 
   if (errorDetail.length) {
     return <div>Ha ocurrido un error</div>;
