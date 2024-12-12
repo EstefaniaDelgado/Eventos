@@ -6,7 +6,6 @@ const USER_INFO = 'user_info';
 
 const Register = () => {
   const [isLoading, setIsLoading] = useState(false);
-  console.log(isLoading)
   const navigate = useNavigate();
 
   const {

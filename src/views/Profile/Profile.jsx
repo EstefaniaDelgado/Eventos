@@ -6,7 +6,7 @@ import styles from './Profile.module.css';
 const Profile = () => {
 
   const[userData, setUserData]=useState({});
-  console.log(userData)
+ 
   const { pathname } = useLocation();
   
   const navigate = useNavigate();
@@ -24,7 +24,6 @@ const Profile = () => {
 
   return (
     <div>
-      {/* <Link to={'/'}>Inicio</Link> */}
       <div className={styles.container}>
       <span
           className={`${
