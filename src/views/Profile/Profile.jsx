@@ -12,7 +12,7 @@ const Profile = () => {
   const navigate = useNavigate();
 
   useEffect(()=>{
-    const data= JSON.parse(localStorage.getItem('user_info'));
+    const data= JSON.parse(localStorage.getItem('user_info')) || {};
     if(Object.values(data).length){
       setUserData(data)
     }
@@ -50,9 +50,6 @@ const Profile = () => {
           <h3 className="font-light z-50 text-lg md:text-xl font-title text-subtitlePrimary">
            [{userData.email?.length ? userData?.email : " Email "}]
           </h3>
-          {/* <h2 className="z-50 font-semibold text-2xl md:text-3xl">
-            Guardar tus eventos favoritos
-          </h2> */}
         </div>
       </div>
       <Outlet />

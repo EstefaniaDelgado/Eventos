@@ -7,7 +7,7 @@ const Layout = () => {
   return (
     <div className='mx-auto flex flex-col min-h-screen max-w-screen-2xl bg-black text-white'>
       <NavbarMenu/>
-      <main className=' flex-1'>
+      <main className='flex-1 flex flex-col justify-center '>
         <Outlet />
       </main>
       <Footer/>

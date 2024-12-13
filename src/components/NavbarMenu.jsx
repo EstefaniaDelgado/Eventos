@@ -20,11 +20,11 @@ const pages = [
   { name: "Eventos", path: "/events" },
   // { name: 'Sobre Nosotros', path: '/about-us' },
   { name: "Registrarme", path: "/register" },
-  { name: "Blog", path: "" },
-  { name: "Tienda", path: "" },
-  { name: "Contacto", path: "" },
+  // { name: "Blog", path: "" },
+  { name: "Sobre Nosotros", path: "" },
+  // { name: "Contacto", path: "" },
 ];
-const settings = ["Profile", "Account", "Dashboard", "Logout"];
+const settings = ["Profile", "Logout"];
 
 function NavbarMenu() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -50,6 +50,14 @@ function NavbarMenu() {
   const handleClickItemMenu = (path) => {
     navigate(path);
   };
+
+  const getUser = JSON.parse(localStorage.getItem("user_info")) || {};
+  
+  const handleOnclick=()=>{
+   if(settings[1]==="Logout"){
+    localStorage.clear()
+   }
+  }
 
   return (
     <AppBar position="sticky" className="bg-black/50 py-3">
@@ -162,8 +170,9 @@ function NavbarMenu() {
             <PrimaryButton />
           </div>
 
-          {/* MENU DEL USER
-          <Box sx={{ flexGrow: 0 }}>
+        {Object.keys(getUser).length ?  
+          <Box sx={{ flexGrow: 0, marginLeft: '10px'
+          }}>
             <Tooltip title="Open settings">
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
                 <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
@@ -187,13 +196,13 @@ function NavbarMenu() {
             >
               {settings.map((setting) => (
                 <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                  <Typography sx={{ textAlign: "center" }}>
+                  <Typography sx={{ textAlign: "center" }} onClick={handleOnclick}>
                     {setting}
                   </Typography>
                 </MenuItem>
               ))}
             </Menu>
-          </Box> */}
+          </Box> :null }
         </Toolbar>
       </Container>
     </AppBar>
