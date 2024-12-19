@@ -2,8 +2,26 @@ import Twitter from '/public/twitter.svg';
 import Facebook from '/public/facebook.svg';
 import Linkedin from '/public/linkedin.svg';
 import Instagram from '/public/instagram.svg';
+import { Link } from 'react-router-dom';
 
-const icons = [Twitter, Facebook, Instagram, Linkedin];
+const icons = [
+  {
+    name: Twitter,
+    url: 'https://x.com/?lang=es',
+  },
+  {
+    name: Facebook,
+    url: 'https://www.facebook.com/',
+  },
+  {
+    name: Instagram,
+    url: 'https://www.instagram.com/',
+  },
+  {
+    name: Linkedin,
+    url: 'https://www.linkedin.com/',
+  },
+];
 
 const Footer = () => {
   return (
@@ -19,12 +37,14 @@ const Footer = () => {
           <div className=" flex justify-center items-center py-3 gap-3">
             {icons.map((icon, index) => {
               return (
-                <div
+                <Link
                   key={`icon-item-${index}`}
+                  to={icon.url}
+                  target="_blank"
                   className="bg-slate-900 border-2 border-slate-900 p-2 rounded-full hover:border-white hover:bg-transparent"
                 >
-                  <img src={icon} alt="Icons" className=" w-4 h-4" />
-                </div>
+                  <img src={icon.name} alt="Icons" className=" w-4 h-4" />
+                </Link>
               );
             })}
           </div>

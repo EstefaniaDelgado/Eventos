@@ -33,13 +33,15 @@ const EventItem = ({ name, id, info, img, onEventClick }) => {
           alt="Event Image"
           className=" w-full rounded-t-lg h-[215px] object-cover"
         />
+        <div className='p-3'>
         <img
           src={!isLiked ? HeartUnfilled : HeartFilled}
-          className='absolute top-4 left-3 cursor-pointer'
+          className='absolute h-10 w-10 object-contain top-4 left-3 cursor-pointer bg-white/60 rounded-full p-2'
           alt="Corazón relleno"
-          width={20}
+          width={20} 
           onClick={handleClickLiked}
         />
+        </div>
       </div>
       <div className="h-full flex flex-col justify-center items-center gap-5">
         <h3 className="text-xl font-semibold px-2 ">{name}</h3>
