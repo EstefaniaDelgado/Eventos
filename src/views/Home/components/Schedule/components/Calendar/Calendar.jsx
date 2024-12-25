@@ -56,7 +56,7 @@ const Calendar = () => {
 
   useEffect(() => {
     fetchEvents();
-  }, []);
+  }, [fetchEvents]);
 
   // Solo establecer `dateTap` al valor del primer tab cuando `datesTaps` cambia y `dateTap` esté vacío
   useEffect(() => {
@@ -110,7 +110,7 @@ const Calendar = () => {
                 className="mt-5 flex flex-col md:flex-row items-center lg:justify-evenly gap-2 text-center"
               >
                 <strong className="hidden md:block w-[15%] xl:text-xl">
-                  {convertTo12HourFormat(event.dates?.start?.localTime)}
+                  {convertTo12HourFormat(event.dates?.start?.localTime || "12:00:00")}
                 </strong>
 
                 <div className="order-1 text-start md:w-2/5 ml-1 xl:text-xl">
