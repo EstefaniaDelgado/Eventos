@@ -50,7 +50,6 @@ const Events = () => {
 
   // //Ir a la pantalla de detalle
   const handleEventClick = (id) => {
-    console.log(id);
     navigate(`/detail/${id}`);
   };
 
