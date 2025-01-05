@@ -12,9 +12,9 @@ import {
   Avatar,
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
-import AdbIcon from "@mui/icons-material/Adb";
 import { Link, useNavigate } from "react-router-dom";
 import PrimaryButton from "./PrimaryButton";
+import Logo from "@assets/logo.png";
 
 const pages = [
   { name: "Eventos", path: "/events" },
@@ -60,7 +60,7 @@ function NavbarMenu() {
   }
 
   return (
-    <AppBar position="sticky" className="bg-black/50 py-3">
+    <AppBar position="sticky" className="bg-black/50 py-3 z-40">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           {/* Mobile Navbar */}
@@ -123,7 +123,9 @@ function NavbarMenu() {
               textDecoration: "none",
             }}
           >
-            <Link to={"/"}>EVENTOS</Link>
+            <Link to={"/"}>
+              <img src={Logo} alt="Logo" className="w-32 h-15" />
+            </Link>
           </Typography>
 
           {/* Desktop Navbar */}
@@ -142,7 +144,9 @@ function NavbarMenu() {
             }}
             className="text-3xl"
           >
-            <Link to={"/"}> EVENTOS</Link>
+            <Link to={"/"}>
+              <img src={Logo} alt="Logo" className="w-32 h-15" />
+            </Link>
           </Typography>
 
           {/* Menu desktop */}
@@ -167,42 +171,45 @@ function NavbarMenu() {
 
           {/* Get Ticket Button */}
           <div className="hidden lg:block">
-            <PrimaryButton />
+            <PrimaryButton link="https://www.ticketmaster.com/" />
           </div>
 
-        {Object.keys(getUser).length ?  
-          <Box sx={{ flexGrow: 0, marginLeft: '10px'
-          }}>
-            <Tooltip title="Open settings">
-              <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
-              </IconButton>
-            </Tooltip>
-            <Menu
-              sx={{ mt: "45px" }}
-              id="menu-appbar"
-              anchorEl={anchorElUser}
-              anchorOrigin={{
-                vertical: "top",
-                horizontal: "right",
-              }}
-              keepMounted
-              transformOrigin={{
-                vertical: "top",
-                horizontal: "right",
-              }}
-              open={Boolean(anchorElUser)}
-              onClose={handleCloseUserMenu}
-            >
-              {settings.map((setting) => (
-                <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                  <Typography sx={{ textAlign: "center" }} onClick={handleOnclick}>
-                    {setting}
-                  </Typography>
-                </MenuItem>
-              ))}
-            </Menu>
-          </Box> :null }
+          {Object.keys(getUser).length ? (
+            <Box sx={{ flexGrow: 0, marginLeft: "10px" }}>
+              <Tooltip title="Open settings">
+                <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
+                  <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
+                </IconButton>
+              </Tooltip>
+              <Menu
+                sx={{ mt: "45px" }}
+                id="menu-appbar"
+                anchorEl={anchorElUser}
+                anchorOrigin={{
+                  vertical: "top",
+                  horizontal: "right",
+                }}
+                keepMounted
+                transformOrigin={{
+                  vertical: "top",
+                  horizontal: "right",
+                }}
+                open={Boolean(anchorElUser)}
+                onClose={handleCloseUserMenu}
+              >
+                {settings.map((setting) => (
+                  <MenuItem key={setting} onClick={handleCloseUserMenu}>
+                    <Typography
+                      sx={{ textAlign: "center" }}
+                      onClick={handleOnclick}
+                    >
+                      {setting}
+                    </Typography>
+                  </MenuItem>
+                ))}
+              </Menu>
+            </Box>
+          ) : null}
         </Toolbar>
       </Container>
     </AppBar>
