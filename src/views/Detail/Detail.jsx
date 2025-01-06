@@ -10,6 +10,7 @@ import formatDateTime from "../../utils/formatDateTime";
 import PrimaryButton from "../../components/PrimaryButton";
 import Location from "../../components/Location/Location";
 import SecondaryButton from "../../components/SecondaryButton";
+import ShowSeatingImage from "../../components/ShowSeatingImage";
 
 const Detail = () => {
   //1. usando el estado y el llamando al endpoint para traer la data del detalle
@@ -24,15 +25,15 @@ const Detail = () => {
   const { detailEvent, isLoadingDetail, errorDetail, fetchEventDetail } =
     useResults();
 
-  console.log(detailEvent);
-
   // formatear y obtener fecha y hora de inicio del evento
   const { startTimeEvent, startDateEvent } = formatDateTime(
     format,
     es,
     detailEvent
   );
-  const heroImage = detailEvent.images?.find((image) => image.width > 500);
+  const heroImage =
+    detailEvent.images?.find((image) => image.width > 500) ||
+    detailEvent.images?.[0];
 
   useEffect(() => {
     //HACIENDO EL LLAMADO DIRECTAMENTE EN EL COMPONENTE
@@ -101,7 +102,7 @@ const Detail = () => {
           </div>
           {/* Get Ticket */}
           <div className="flex justify-center md:justify-end lg:justify-end lg:mr-[16%] xl:justify-center xl:mr-0 items-center xl:col-start-3">
-            <PrimaryButton className={"mx-auto"} />
+            <PrimaryButton className={"mx-auto"} link={detailEvent.url} />
           </div>
         </div>
 
@@ -111,17 +112,13 @@ const Detail = () => {
             <h2 className="text-2xl font-semibold text-center md:text-start my-6">
               Descripción General del Evento
             </h2>
-            <p className="text-justify w-11/12 mx-auto md:mx-0 lg:text-start">
-              {detailEvent.info}
-            </p>
+            <p className="w-11/12 mx-auto md:mx-0">{detailEvent.info}</p>
             {/* Información importante */}
             <div className="my-6 w-11/12 mx-auto md:mx-0">
               <h2 className="font-semibold text-subtitlePrimary">
                 Información Importante
               </h2>
-              <p className="text-justify text-sm lg:text-start text-gray-300">
-                {detailEvent.pleaseNote}
-              </p>
+              <p className="text-sm text-gray-300">{detailEvent.pleaseNote}</p>
             </div>
           </div>
 
@@ -131,20 +128,17 @@ const Detail = () => {
               Distribución de Asientos
             </h2>
             {detailEvent.seatmap?.staticUrl ? (
-              <figure className="rounded-lg py-2 lg:p-2 h-4/5">
-                <img
-                  src={detailEvent.seatmap?.staticUrl}
-                  alt={detailEvent.name}
-                  className="rounded-lg w-full h-full"
-                />
-              </figure>
+              <ShowSeatingImage
+                imageSrc={detailEvent.seatmap?.staticUrl}
+                eventName={detailEvent.name}
+              />
             ) : (
               <p className="text-center">Información No Disponible</p>
             )}
           </div>
 
           {/* Mapa de ubicación del evento */}
-          <div className="md:col-span-3 flex flex-col justify-center items-center py-6">
+          <div className="md:col-span-3 flex flex-col justify-center items-center py-6 z-0">
             <h3 className="text-xl font-semibold pb-6">Ubicación</h3>
             <Location customStyles="rounded-md" detailEvent={detailEvent} />
           </div>

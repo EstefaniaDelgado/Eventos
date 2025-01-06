@@ -52,7 +52,7 @@ const Footer = () => {
         <section className=" flex flex-col items-center justify-center gap-4 md:flex-row md:gap-10 lg:gap-6 ">
           <article className="flex flex-col items-center gap-5 md:ml-20 lg:ml-0">
             <h4 className="text-xl font-semibold md:self-start">Workshops</h4>
-            <p className="self-start ">Sprigns bien diseñadas</p>
+            <p className="self-start ">Springs bien diseñadas</p>
             <p className="self-start ">Comenzar con marcadores</p>
             <p className="self-start ">Aprender todos los días</p>
             <p className="self-start">Crear productos estrategicos</p>
