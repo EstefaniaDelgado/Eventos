@@ -11,7 +11,7 @@ const AboutEvent = () => {
             [ Sobre el Evento ]
           </h3>
           <h2 className="z-50 font-semibold text-2xl md:text-3xl ">
-            Bienvenido a los mejores eventos para terminar muy bien el 2024
+            Bienvenido a los mejores eventos 
           </h2>
         </div>
         <p>

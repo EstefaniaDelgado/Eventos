@@ -13,7 +13,7 @@ const Hero = () => {
           variant="h3"
           className="font-light font-title text-sm sm:text-base lg:text-2xl absolute bottom-2 sm:bottom-4 xl:bottom-16"
         >
-          [Diciembre 20-22, Seattle, Show en Vivo]
+          [Diciembre 20-25, Seattle, Show en Vivo]
         </Typography>
       </div>
       <div className="w-11/12 sm:w-3/4 lg:w-7/12 xl:w-5/12 text-center">
