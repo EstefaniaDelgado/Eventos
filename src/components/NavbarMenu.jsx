@@ -21,7 +21,7 @@ const pages = [
   // { name: 'Sobre Nosotros', path: '/about-us' },
   { name: "Registrarme", path: "/register" },
   // { name: "Blog", path: "" },
-  { name: "Sobre Nosotros", path: "" },
+  { name: "Sobre Nosotros", path: "/about" },
   // { name: "Contacto", path: "" },
 ];
 const settings = ["Profile", "Logout"];
