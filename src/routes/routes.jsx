@@ -8,6 +8,7 @@ import MyInfo from '../views/Profile/components/MyInfo/MyInfo';
 import LikedEvents from '../views/Profile/components/LikedEvents';
 import Layout from '../views/Layout/Layout';
 import Register from '../views/Register'
+import  About  from '../views/Home/components/AboutEvent/components/About';
 
 
 const router = createBrowserRouter([
@@ -31,6 +32,10 @@ const router = createBrowserRouter([
       {
         path: '/detail/:id',
         element: <Detail />,
+      },
+      {
+        path:'/about',
+        element:<About/>
       },
       {
         path: '/profile',

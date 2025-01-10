@@ -4,7 +4,7 @@ import Events from '../../components/Events';
 import ReactPaginate from 'react-paginate';
 import { Link } from 'react-router-dom';
 import Hero from './components/Hero';
-import AboutEvent from './components/AboutEvent';
+import AboutEvent from './components/AboutEvent/AboutEvent';
 import Slider from '../Home/components/Slider';
 import Counter from '../Home/components/Schedule/components/Counter';
 import Calendar from '../Home/components/Schedule/components/Calendar/Calendar';
