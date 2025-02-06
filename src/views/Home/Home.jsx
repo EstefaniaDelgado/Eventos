@@ -23,7 +23,8 @@ const Home = () => {
   // const { data, isLoading, error, fetchEvents } = useResults();
   const { data, fetchEvents } = useResults();
   let events = data._embedded?.events.slice(1,2) || [];
-  let event= events[0]?.dates?.start?.dateTime || {}
+  let event= events[0]?.dates?.start?.dateTime || {};
+  const [isToggle, setIsToggle]=useState(false)
   // const page = data?.page || {};
 
   // useEffect(() => {
@@ -93,7 +94,7 @@ const Home = () => {
         {/* <NavbarMenu/> */}
         {/* <Link to={'/profile/my-info'}>Perfil Usuario</Link> */}
       </div>
-
+      <button onClick={()=> setIsToggle(!isToggle)}>{isToggle ? 'On' : 'Off'}</button>
       <Hero />
       <Slider />
       <AboutEvent />

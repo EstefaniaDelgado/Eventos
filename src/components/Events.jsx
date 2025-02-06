@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef, useCallback, useMemo } from 'react';
 import EventItem from './EventItem';
 import Searchbar from './SearchBar';
 import ReactPaginate from 'react-paginate';
@@ -24,14 +24,14 @@ const Events = () => {
   
 
   const { data, isLoading, error, fetchEvents } = useResults();
-  const events = data._embedded?.events || [];
-  const page = data?.page || {};
+  const events = useMemo(()=>data._embedded?.events || [], [data._embedded?.events]);
+  const page = useMemo(()=>data?.page || {},[data?.page]);
 
   const refComp = useRef();
 
   useEffect(() => {
     fetchEvents();
-  }, []);
+  }, [fetchEvents]);
 
       
 
@@ -43,10 +43,10 @@ const Events = () => {
     renderEvents();
   };
 
-  const handlePageClick = ({ selected }) => {
+  const handlePageClick = useCallback(({ selected }) => {
     // console.log(selected);
     fetchEvents(`&keyword=${searchTerm}&page=${selected}`);
-  };
+  }, [searchTerm, fetchEvents]);
 
   // //Ir a la pantalla de detalle
   const handleEventClick = (id) => {
