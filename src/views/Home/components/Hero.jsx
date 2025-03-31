@@ -5,7 +5,7 @@ import SecondaryButton from "../../../components/SecondaryButton";
 
 const Hero = () => {
   return (
-    <div className="h-screen bg-hero-image bg-no-repeat bg-cover bg-center flex flex-col justify-center items-center gap-4">
+    <div className="h-screen  bg-hero-image lg:mb-8 xl:mb-0 bg-no-repeat bg-cover bg-center flex flex-col justify-center items-center gap-4">
       <div className="relative w-11/12 sm:w-8/12 mx-auto flex flex-col items-center">
         {/* <div className="absolute inset-0 opacity-10 bg-black"></div> */}
         <img src={Logo} alt="Logo" className="w-full h-full" />

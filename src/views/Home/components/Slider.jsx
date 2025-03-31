@@ -45,9 +45,9 @@ const Slider = () => {
 
   
 
-  const handleExpandClick = () => {
-    setExpanded(!expanded);
-  };
+  // const handleExpandClick = () => {
+  //   setExpanded(!expanded);
+  // };
 
   return (
     <div className="relative mx-auto w-5/6 h-[180px] ">
