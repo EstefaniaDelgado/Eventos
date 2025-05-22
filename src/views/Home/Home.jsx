@@ -22,8 +22,8 @@ const Home = () => {
   //Despues la informacion esta en una Store de manera global
   // const { data, isLoading, error, fetchEvents } = useResults();
   const { data, fetchEvents } = useResults();
-  let events = data._embedded?.events.slice(0,3) || [];
-  let event= events[2]?.dates?.start?.dateTime || {};
+  let events = data._embedded?.events.slice(0,6) || [];
+  let event= events[5]?.dates?.start?.dateTime || {};
   // const [isToggle, setIsToggle]=useState(false)
   // const page = data?.page || {};
 
