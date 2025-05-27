@@ -2,14 +2,14 @@ import { Link } from "react-router-dom";
 
 const AboutEvent = () => {
   return (
-    <section className="relative z-10 my-16 mx-5 max-w-[1200px] md:flex md:items-center md:gap-5 xl:mx-auto">
-      <div className="pt-5 md:pt-4 lg:pt-0 xl:pt-20 flex flex-col justify-end items-start gap-5 md:flex-1 md:order-1 md:pl-5 xl:p-5 ">
+    <section className="relative z-10 my-16 mx-5 max-w-[1200px] md:flex md:items-center md:gap-5 xl:mx-auto ">
+      <div className="pt-5 md:pt-0  xl:pt-20 flex flex-col justify-end items-start gap-5 md:flex-1 md:order-1 md:pl-5 xl:p-5">
         {" "}
-        <h2 className="absolute top-0 text-5xl font-extrabold text-gray-900 md:text-6xl lg:text-8xl xl:text-9xl">
+        <h2 className="absolute top-0 md:top-2 lg:top-5 text-5xl font-extrabold text-gray-900 md:text-6xl lg:text-8xl xl:text-9xl">
           ABOUT
         </h2>
         <div className="z-50">
-          <h3 className="font-light z-50 text-lg md:text-xl font-title text-subtitlePrimary">
+          <h3 className="font-light z-50 text-lg md:text-xl font-title text-subtitlePrimary mb-3">
             [ Sobre el Evento ]
           </h3>
           <h2 className="z-50 font-semibold text-2xl md:text-3xl ">

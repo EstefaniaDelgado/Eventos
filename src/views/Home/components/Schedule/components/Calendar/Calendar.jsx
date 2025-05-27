@@ -165,7 +165,7 @@ const Calendar = () => {
     <div className="w-full">
       <section className="relative z-10  my-16 md:flex md:items-center md:gap-5 xl:mx-auto ">
         <div className="pt-8 md:pt-16 xl:pt-24 flex flex-col justify-end items-center gap-5 md:flex-1">
-          <h2 className="absolute top-2 t text-5xl font-extrabold text-gray-900 md:text-8xl xl:text-9xl">
+          <h2 className="absolute top-2 text-5xl font-extrabold text-gray-900 md:text-8xl xl:text-9xl">
             SCHEDULE
           </h2>
           <div className="z-50 text-center">
