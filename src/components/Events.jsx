@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef, useCallback, useMemo } from 'react';
+import { useState, useEffect, useRef, useCallback, useMemo,memo } from 'react';
 import EventItem from './EventItem';
 import Searchbar from './SearchBar';
 import ReactPaginate from 'react-paginate';
@@ -173,4 +173,4 @@ const Events = () => {
   );
 };
 
-export default Events;
+export default memo(Events);
