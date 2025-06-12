@@ -12,7 +12,7 @@ export default {
       },
       backgroundImage: {
         "hero-image":
-          "linear-gradient(to bottom, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.9) 100%),url('../src/assets/hero.jpg')",
+          "linear-gradient(to bottom, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.9) 100%),url('../src/assets/hero.webp')",
         artist: "url('../src/assets/artist.jpg')",
         counter: "url('../src/assets/background-counter-date.webp')",
         theater: "url('../src/assets/teather.jpg')",
