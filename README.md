@@ -7,7 +7,7 @@ Aplicación web que permite buscar eventos en tiempo real utilizando la API de T
 
 ## 🖼️ Vista previa
 
-![screenshot-1](./assets/logo.PNG)
+![screenshot-1](./src/assets/logo.PNG)
 ![screenshot-2](./assets/screenshot2.PNG)
 ![screenshot-3](./assets/screenshot3.PNG)
 ![screenshot-4](./assets/screenshot4.PNG)
