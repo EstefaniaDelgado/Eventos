@@ -1,8 +1,42 @@
-# React + Vite
+# 🎫 TicketMaster Event Explorer
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Aplicación web que permite buscar eventos en tiempo real utilizando la API de TicketMaster. Es ideal para descubrir conciertos, deportes y espectáculos cercanos con solo ingresar una palabra clave.
 
-Currently, two official plugins are available:
+## 🌐 Demo
+🔗 [Ver la aplicación en vivo](https://eventos-ochre.vercel.app/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🖼️ Vista previa
+
+![screenshot-1](./src/assets/screenshot1.png)
+![screenshot-2](./src/assets/screenshot2.png)
+![screenshot-3](./src/assets/screenshot3.png)
+![screenshot-4](./src/assets/screenshot4.png)
+
+
+
+## 🚀 Características
+
+- 🔎 Búsqueda de eventos por nombre
+- 📸 Muestra imagen, nombre, fecha y ubicación del evento
+- 🌍 Integración con la API de TicketMaster
+- 🎨 Diseño responsive y atractivo
+- 💡 Feedback visual cuando no hay resultados
+
+## 🛠️ Tecnologías utilizadas
+
+- **React** – Biblioteca principal
+- **Tailwind CSS** – Estilos rápidos y responsivos
+- **JavaScript (ES6+)**
+- **API de TicketMaster**
+- **Vite** – Empaquetador rápido
+- **Netlify** – Para el deploy (si aplica)
+
+## 🧠 Lo que aprendí
+
+- Cómo consumir APIs externas y manejar sus respuestas
+- Cómo manejar el estado de búsqueda en React
+- Buenas prácticas de UI/UX para mostrar resultados dinámicos
+- Validación de datos y manejo de errores
+
+
+
