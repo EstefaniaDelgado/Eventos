@@ -4,7 +4,7 @@
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
 ![Material UI](https://img.shields.io/badge/Material%20UI-0081CB?style=for-the-badge&logo=mui&logoColor=white)
-![Estado del proyecto](https://img.shields.io/badge/Estado-En%20desarrollo-yellow?style=for-the-badge)
+![Estado del proyecto](https://img.shields.io/badge/Estado-Terminado-brightgreen?style=for-the-badge)
 
 ![Autor](https://img.shields.io/badge/Autor-Estefanía%20Delgado-blueviolet?style=for-the-badge)
 ![Versión](https://img.shields.io/badge/Versi%C3%B3n-1.0.0-informational?style=for-the-badge)
@@ -50,7 +50,7 @@ Aplicación web que permite buscar eventos en tiempo real utilizando la API de T
 
 ```bash
 git clone https://github.com/EstefaniaDelgado/Eventos.git
-cd flashcards-memory-app
+cd ticketmaster-events
 npm install
 npm run dev
 
