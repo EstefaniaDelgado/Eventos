@@ -24,11 +24,12 @@ Aplicación web que permite buscar eventos en tiempo real utilizando la API de T
 ## 🛠️ Tecnologías utilizadas
 
 - **React** – Biblioteca principal
+- **Material-UI** - Componentes estilizados
 - **Tailwind CSS** – Estilos rápidos y responsivos
 - **JavaScript (ES6+)**
 - **API de TicketMaster**
 - **Vite** – Empaquetador rápido
-- **Netlify** – Para el deploy (si aplica)
+- **Vercel** – Para el deploy
 
 ## 🧠 Lo que aprendí
 
