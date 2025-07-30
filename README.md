@@ -48,10 +48,25 @@ Aplicación web que permite buscar eventos en tiempo real utilizando la API de T
 - Buenas prácticas de UI/UX para mostrar resultados dinámicos
 - Validación de datos y manejo de errores
 
+## 🛠️ Instalación local
+
+1. **Clona el repositorio:**
+
 ```bash
 git clone https://github.com/EstefaniaDelgado/Eventos.git
 cd ticketmaster-events
 npm install
 npm run dev
+```
+
+2. Configura las variables de entorno:
+
+Crea un archivo .env en la raíz del proyecto y agrega tus claves:
+
+```bash
+VITE_APP_API_URL=URL_LOCALHOST
+VITE_APP_URL_DEPLOYMENT=URL_DEL_DEPLOY
+VITE_TICKETMASTER_API_KEY= VITE_TICKETMASTER_API_KEY
+```
 
 
