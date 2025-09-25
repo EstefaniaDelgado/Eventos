@@ -40,11 +40,9 @@ const Events = () => {
 
     setSearchTerm(nameEvent);
     // fetchEvents(`&keyword=${nameEvent}`);
-    renderEvents();
   };
 
   const handlePageClick = useCallback(({ selected }) => {
-    // console.log(selected);
     fetchEvents(`&keyword=${searchTerm}&page=${selected}`);
   }, [searchTerm, fetchEvents]);
 
