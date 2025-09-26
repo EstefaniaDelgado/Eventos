@@ -1,5 +1,15 @@
 # 🎫 TicketMaster Event Explorer
 
+![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
+![Material UI](https://img.shields.io/badge/Material%20UI-0081CB?style=for-the-badge&logo=mui&logoColor=white)
+![Estado del proyecto](https://img.shields.io/badge/Estado-Terminado-brightgreen?style=for-the-badge)
+
+![Autor](https://img.shields.io/badge/Autor-Estefanía%20Delgado-blueviolet?style=for-the-badge)
+![Versión](https://img.shields.io/badge/Versi%C3%B3n-1.0.0-informational?style=for-the-badge)
+![Licencia](https://img.shields.io/badge/Licencia-MIT-brightgreen?style=for-the-badge)
+
 Aplicación web que permite buscar eventos en tiempo real utilizando la API de TicketMaster. Es ideal para descubrir conciertos, deportes y espectáculos cercanos con solo ingresar una palabra clave.
 
 ## 🌐 Demo
@@ -7,10 +17,9 @@ Aplicación web que permite buscar eventos en tiempo real utilizando la API de T
 
 ## 🖼️ Vista previa
 
-![screenshot-1](./src/assets/screenshot1.png)
-![screenshot-2](./src/assets/screenshot2.png)
-![screenshot-3](./src/assets/screenshot3.png)
-![screenshot-4](./src/assets/screenshot4.png)
+![screenshot-1](./src/assets/screenshot1.PNG)
+![screenshot-2](./src/assets/screenshot3.PNG)
+![screenshot-3](./src/assets/screenshot4.PNG)
 
 
 
@@ -25,11 +34,12 @@ Aplicación web que permite buscar eventos en tiempo real utilizando la API de T
 ## 🛠️ Tecnologías utilizadas
 
 - **React** – Biblioteca principal
+- **Material-UI** - Componentes estilizados
 - **Tailwind CSS** – Estilos rápidos y responsivos
 - **JavaScript (ES6+)**
 - **API de TicketMaster**
 - **Vite** – Empaquetador rápido
-- **Netlify** – Para el deploy (si aplica)
+- **Vercel** – Para el deploy
 
 ## 🧠 Lo que aprendí
 
@@ -38,5 +48,25 @@ Aplicación web que permite buscar eventos en tiempo real utilizando la API de T
 - Buenas prácticas de UI/UX para mostrar resultados dinámicos
 - Validación de datos y manejo de errores
 
+## 🛠️ Instalación local
+
+1. **Clona el repositorio:**
+
+```bash
+git clone https://github.com/EstefaniaDelgado/Eventos.git
+cd ticketmaster-events
+npm install
+npm run dev
+```
+
+2. Configura las variables de entorno:
+
+Crea un archivo .env en la raíz del proyecto y agrega tus claves:
+
+```bash
+VITE_APP_API_URL=URL_LOCALHOST
+VITE_APP_URL_DEPLOYMENT=URL_DEL_DEPLOY
+VITE_TICKETMASTER_API_KEY= VITE_TICKETMASTER_API_KEY
+```
 
 
